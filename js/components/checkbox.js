@@ -1,0 +1,1 @@
+jQuery('.agree').prop('checked', false);
