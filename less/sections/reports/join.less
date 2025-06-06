@@ -1,0 +1,52 @@
+@import "less/base/variables";
+
+.join {
+
+  .contacts {
+
+    &__block {
+
+      &_item {
+
+        &:last-child {
+
+          .btn {
+            color: @colortitle;
+            background: transparent;
+            border: 1px solid #ABB3C9;
+
+            &:hover {
+              color: #f0f1f5;
+              background: @colortitle;
+              border-color: @colortitle;
+
+              svg {
+
+                path {
+                  fill: #f0f1f5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    max-width: 260px;
+
+    &:hover {
+      color: #f0f1f5;
+      background: @colortitle;
+      border-color: @colortitle;
+
+      svg {
+
+        path {
+          fill: #f0f1f5;
+        }
+      }
+    }
+  }
+}

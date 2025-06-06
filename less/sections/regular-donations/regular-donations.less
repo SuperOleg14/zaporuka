@@ -1,0 +1,136 @@
+@import "less/base/mixins";
+@import "less/base/variables";
+
+.first-screen {
+  margin-bottom: 12px;
+
+  &__content {
+    margin-top: 32px;
+
+    .media(@mobile, {
+      margin-top: 16px;
+    });
+  }
+}
+
+.info {
+
+  .about-volunteering {
+
+    &__content {
+
+      &_item {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+
+      &_text {
+        margin-top: 42px;
+
+        .media(@mobile, {
+          margin-top: 16px;
+        });
+
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 76px;
+
+    h1, h2, h3 {
+      font: 44px/50px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-bottom: 16px;
+      margin-top: 0;
+
+      .media(@mobile, {
+        font-size: 29px;
+        line-height: 36px;
+        letter-spacing: -0.29px;
+      });
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul, ol {
+      list-style: inherit;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-active-project {
+    margin-top: 40px;
+
+    .media(@mobile, {
+      margin-top: 32px;
+    });
+
+    &__date {
+      font: 13px/18px @fontInter;
+      font-weight: 400;
+      color: #7C8395;
+      letter-spacing: 0.26px;
+      margin-bottom: 16px;
+
+      .media(@desktop, {
+        width: 100%;
+      });
+    }
+
+    .info {
+
+      &__text {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    .about-volunteering__content_text {
+      margin-top: 20px;
+
+      .media(@mobile, {
+        margin-top: 12px;
+      });
+    }
+
+    .about-volunteering__content_item {
+      margin-top: 12px;
+    }
+
+    .result__content {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 0;
+
+      .media(@mobile, {
+        margin-top: 32px;
+      });
+    }
+  }
+}
+
+.tax-projects-category {
+
+  .info {
+    margin-top: 20px;
+
+    .about-volunteering__content_item {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      .media(@mobile, {
+        margin-bottom: 12px;
+      });
+    }
+  }
+}

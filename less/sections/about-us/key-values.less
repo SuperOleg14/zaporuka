@@ -1,0 +1,60 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.key-values {
+
+  &__content {
+    position: relative;
+    background: linear-gradient(180deg, #F6B738 0%, #EF9E29 100%);
+    padding: 64px;
+    border-radius: 30px;
+
+    .media(@tablet, {
+      padding: 30px;
+    });
+
+    &:before {
+      height: 32px;
+      width: 80%;
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgOTEyIDMyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNDU2IDBDMjU4LjEyNyAwIDg2LjMwOCAxMi45NzEyIDAgMzJIOTEyQzgyNS42OTIgMTIuOTcxMiA2NTMuODczIDAgNDU2IDBaIiBmaWxsPSIjRjZCNzM4Ii8+Cjwvc3ZnPgo=") no-repeat top center;
+      background-size: cover;
+
+      .media(@desktop, {
+        height: 24px;
+        width: 85%;
+      });
+
+      .media(@tablet, {
+        height: 20px;
+        width: 85%;
+      });
+
+      .media(@mobile, {
+        height: 10px;
+        width: 85%;
+      });
+    }
+  }
+
+  &__block {
+
+    &_item {
+      color: white;
+      margin-bottom: 32px;
+
+      .media(@mobile, {
+        flex-basis: 100%;
+        margin-bottom: 16px;
+      });
+    }
+
+    .small-title {
+      margin: 16px 0;
+    }
+  }
+}

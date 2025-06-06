@@ -1,0 +1,80 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.media {
+
+  &__content {
+    margin-bottom: 24px;
+
+    .media(@mobile, {
+      margin-bottom: 0;
+    });
+
+    &_info {
+      width: 100%;
+    }
+
+    &_item {
+      position: relative;
+      font: 20px/30px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      background: #F8F8F8;
+      border: 1px solid #F0F1F5;
+      border-radius: 30px;
+      padding: 32px;
+      margin-bottom: 24px;
+
+
+      &:hover {
+
+        .media(@minmobile, {
+
+          .media__content_title {
+            color: @orange;
+          }
+
+          svg {
+            margin-right: 10px;
+            path {
+              fill: @orange;
+            }
+          }
+        });
+      }
+
+      .media(@mobile, {
+        flex-basis: 48%;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 20px;
+      });
+
+      .media(@phone, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_title {
+      margin-bottom: 24px;
+      transition: all .3s;
+    }
+
+    svg {
+      transition: all .3s;
+
+      path {
+        transition: all .3s;
+      }
+    }
+
+    &_link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+}

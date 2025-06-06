@@ -1,0 +1,50 @@
+@import "../base/mixins";
+
+.our-partners {
+
+  .container {
+    max-width: 1100px;
+  }
+
+  &__content {
+    margin-bottom: 48px;
+
+    .media(@mobile, {
+      margin-bottom: 24px;
+    });
+
+    &_item {
+      flex-basis: 19%;
+      background: #F8F8F8;
+      padding: 32px;
+      border: 1px solid #F0F1F5;
+      border-radius: 20px;
+      margin-bottom: 12px;
+
+      .media(@desktop, {
+        flex-basis: 32%;
+      });
+
+      .media(@mobile, {
+        flex-basis: 49%;
+        padding: 20px;
+      });
+
+      img {
+        max-width: inherit;
+
+        .media(@desktop, {
+          width: 100%;
+          max-width: 100%;
+        });
+      }
+    }
+  }
+
+  .btn {
+
+    .media(@phone, {
+      width: 100%;
+    });
+  }
+}

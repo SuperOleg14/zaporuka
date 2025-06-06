@@ -1,0 +1,95 @@
+@import "less/base/mixins";
+
+.important {
+  margin-top: 95px;
+
+  .media(@mobile, {
+    margin-bottom: 72px;
+  });
+
+  &-slider {
+    padding-bottom: 60px;
+  }
+
+  &__content {
+
+    .media(@mintablet, {
+      display: flex;
+      justify-content: space-between;
+    });
+
+    &_info {
+      margin-bottom: 32px;
+
+      .media(@mintablet, {
+       flex-basis: 36%;
+        margin-bottom: 0;
+      });
+
+      h2 {
+        font: 44px/50px @fontInter;
+        font-weight: 600;
+        color: @colortitle;
+        margin-bottom: 16px;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 29px;
+          line-height: 36px;
+          letter-spacing: -0.29px;
+        });
+      }
+
+      .btn {
+        margin-top: 48px;
+
+        .media(@mobile, {
+          margin-top: 24px;
+        });
+
+        .media(@phone, {
+          width: 100%;
+        });
+      }
+    }
+
+    &_slider {
+      max-width: 740px;
+      position: relative;
+
+      .media(@desktop, {
+        max-width: 640px;
+      });
+
+      .media(@tablet, {
+        margin-left: auto;
+        margin-right: auto;
+      });
+
+      &--photo {
+        border-radius: 30px;
+        overflow: hidden;
+
+        img {
+          min-height: 490px;
+          border-radius: 30px;
+
+          .media(@desktop, {
+            min-height: 410px;
+          });
+
+          .media(@phone, {
+            min-height: 240px;
+          });
+        }
+      }
+    }
+  }
+
+  .slider-counter {
+    position: absolute;
+    right: 110px;
+    bottom: 8px;
+    z-index: 11;
+  }
+}

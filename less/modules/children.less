@@ -1,0 +1,112 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.children {
+
+  .title {
+    max-width: 625px;
+    margin-bottom: 32px;
+
+    .media(@mobile, {
+      margin-bottom: 16px;
+    });
+  }
+
+  &__content {
+    margin-bottom: 48px;
+
+    .media(@mobile, {
+      margin-bottom: 24px;
+    });
+
+    &_item {
+      padding: 20px;
+      background:#F8F8F8;
+      border: 1px solid #F0F1F5;
+      border-radius: 30px;
+      margin-top: 24px;
+
+      .media(@tablet, {
+        flex-basis: 49%;
+      });
+
+      .media(@mobile, {
+        padding: 15px;
+        margin-top: 12px;
+      });
+
+      .media(@phone, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-right: 20px;
+
+      img {
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    &_info {
+      font: 16px/24px @fontInter;
+      font-weight: 400;
+      color: @colortext;
+
+      .media(@mobile, {
+        font-size: 14px;
+        line-height: 22px;
+      });
+
+      div {
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    &_title {
+      font: 20px/30px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-top: 20px;
+      margin-bottom: 32px;
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 12px;
+        margin-bottom: 20px;
+      });
+    }
+
+    &_bottom {
+      font: 13px/18px @fontInter;
+      font-weight: 400;
+      color: #7C8395;
+      letter-spacing: 0.26px;
+    }
+
+    &_price {
+      font: 28px/34px @fontInter;
+      font-weight: 600;
+      color: @orange;
+      letter-spacing: -0.28px;
+
+      .media(@mobile, {
+        font-size: 20px;
+        line-height: 30px;
+      });
+    }
+  }
+
+  .btn {
+    margin: 0;
+  }
+}

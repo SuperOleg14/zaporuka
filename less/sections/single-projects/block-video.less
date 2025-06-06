@@ -1,0 +1,60 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.block-video {
+
+  &__content {
+
+    &_info {
+      flex-basis: 33%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+      });
+
+      h2 {
+        font: 44px/50px @fontInter;
+        font-weight: 600;
+        color: @colortitle;
+        margin-bottom: 16px;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 29px;
+          line-height: 36px;
+          letter-spacing: -0.29px;
+        });
+      }
+
+      p {
+        font: 18px/24px @fontInter;
+        font-weight: 400;
+        color: @colortitle;
+        margin: 0;
+
+        .media(@mobile, {
+          font-size: 16px;
+          line-height: 22px;
+        });
+      }
+    }
+
+    &_url {
+      flex-basis: 58%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      iframe {
+        border-radius: 8px;
+        overflow: hidden;
+
+        .media(@phone, {
+          height: 220px;
+        });
+      }
+    }
+  }
+}

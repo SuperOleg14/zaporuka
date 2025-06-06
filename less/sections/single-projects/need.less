@@ -1,0 +1,112 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.need {
+
+  &__content {
+
+    .title {
+      flex-basis: 39%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+        margin-bottom: 32px;
+      });
+    }
+
+    &_item {
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &_block {
+      flex-basis: 58%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .media(@phone, {
+        flex-wrap: wrap;
+      });
+
+      &--item {
+        padding: 32px;
+        background: #F8F8F8;
+        border: 1px solid #F0F1F5;
+        border-radius: 20px;
+
+        .media(@phone, {
+          flex-basis: 100%;
+          padding: 24px;
+          margin-bottom: 12px;
+        });
+      }
+
+      &--title {
+        font: 24px/30px @fontInter;
+        font-weight: 600;
+        color: @colortitle;
+        margin-left: 12px;
+
+        .media(@mobile, {
+          font-size: 18px;
+          line-height: 22px;
+        });
+      }
+
+      &--text {
+        font: 18px/24px @fontInter;
+        font-weight: 400;
+        color: @colortext;
+        margin-top: 20px;
+
+        .media(@mobile, {
+          font-size: 16px;
+          line-height: 22px;
+        });
+      }
+    }
+  }
+}
+
+.activity {
+
+  .need {
+
+    &__content {
+
+      &_info {
+        flex-basis: 39%;
+
+        .media(@tablet, {
+          flex-basis: 100%;
+          margin-bottom: 32px;
+        });
+      }
+
+      .title {
+        margin-bottom: 16px;
+      }
+
+      &_block {
+
+        &--item {
+
+          .media(@phone, {
+            flex-basis: 100%;
+            margin-top: 12px;
+            margin-bottom: 0;
+          });
+
+          &:last-child {
+            flex-basis: 100%;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

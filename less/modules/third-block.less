@@ -1,0 +1,74 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.third-block {
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    margin: 48px 0;
+
+    .media(@tablet, {
+      flex-wrap: wrap;
+    });
+
+    .media(@mobile, {
+      margin: 24px 0;
+    });
+
+    &_item {
+      padding: 40px;
+      background: #F8F8F8;
+      border: 1px solid #F0F1F5;
+      border-radius: 30px;
+
+      .media(@tablet, {
+        flex-basis: 49%;
+        margin-bottom: 20px;
+      });
+
+      .media(@mobile, {
+        padding: 20px;
+      });
+
+      .media(@phone, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_title {
+      min-height: 60px;
+      font: 24px/30px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-top: 32px;
+      margin-bottom: 16px;
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 24px;
+      });
+    }
+
+    &_text {
+      font: 18px/24px @fontInter;
+      font-weight: 400;
+      color: #7C8395;
+
+      .media(@mobile, {
+        font-size: 16px;
+        line-height: 22px;
+      });
+    }
+
+    &_icon {
+
+      img {
+        width: inherit;
+      }
+    }
+  }
+}

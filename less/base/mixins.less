@@ -1,0 +1,14 @@
+@mindesktop: "min-width: 1200px";
+@desktop: "max-width: 1199px";
+@mintablet: "min-width: 992px";
+@tablet: "max-width: 991px";
+@minmobile: "min-width: 768px";
+@mobile: "max-width: 767px";
+@phone: "max-width: 540px";
+
+.media(@device, @rules) {
+  @media screen and (~"@{device}") {
+    @rules();
+  }
+}
+

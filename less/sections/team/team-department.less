@@ -1,0 +1,92 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.team-department {
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__person {
+
+    .media(@mobile, {
+      justify-content: space-between;
+    });
+
+    &_item {
+      margin-bottom: 40px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 2%;
+
+        .media(@mobile, {
+          margin-right: 0;
+        });
+      }
+
+      .media(@mobile, {
+        flex-basis: 49%;
+        margin-bottom: 24px;
+      });
+
+      .media(@phone, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_photo {
+      border-radius: 15px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &_name {
+      font: 18px/24px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-bottom: 5px;
+      margin-right: 16px;
+      margin-top: 16px;
+
+      .media(@mobile, {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 12px;
+        margin-right: 0;
+      });
+    }
+
+    &_email {
+      display: block;
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: @orange;
+          }
+        }
+      }
+    }
+
+    &_position {
+      font: 16px/24px @fontInter;
+      font-weight: 400;
+      color: #7C8395;
+      margin-right: 16px;
+
+      .media(@mobile, {
+        font-size: 14px;
+        line-height: 22px;
+        margin-right: 0;
+      });
+    }
+  }
+}

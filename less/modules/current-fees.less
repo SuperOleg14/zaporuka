@@ -1,0 +1,298 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.current-fees {
+  position: relative;
+  width: 100%;
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .fees-switch {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    .media(@mobile, {
+      gap: 20px;
+      margin-top: 12px;
+    });
+
+    &-label {
+      position: relative;
+      .switcher {
+        display: block;
+        position: relative;
+        width: 45px;
+        height: 28px;
+        background-color: #C9CEDF;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border-radius: 50%;
+          top: 4px;
+          left: 4px;
+          transition: transform 0.3s ease;
+        }
+
+        .media(@mobile, {
+          width: 50px;
+
+          &::before {
+            top: 2px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+          }
+        });
+      }
+
+      input {
+        display: none;
+
+        &:checked + .switcher {
+          background-color: @orange;
+
+          &::before {
+            transform: translateX(17px);
+
+            .media(@mobile, {
+              transform: translateX(19px);
+            });
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin: 48px 0;
+    gap: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .media(@mobile, {
+      margin: 24px 0;
+      flex-direction: column;
+      gap: 0 16px;
+      grid-template-columns: 1fr;
+    });
+
+    .item {
+      border-radius: 30px;
+      border: 1px solid #F0F1F5;
+      background-color: #F8F8F8;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+
+      .media(@tablet, {
+        flex-basis: 48%;
+      });
+
+      .media(@mobile, {
+        flex-basis: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+      });
+
+      .bottom {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .media(@minmobile, {
+          flex: 1 1 auto;
+        });
+
+        .media(@mobile, {
+          padding: 16px;
+        });
+      }
+
+      .image {
+        height: 220px;
+
+        .media(@mobile, {
+          height: 180px;
+          max-height: 180px;
+        });
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .small-title {
+        margin: 16px 0 12px;
+
+        .media(@mobile, {
+          font-size: 18px;
+          line-height: 22px;
+        });
+      }
+
+      .small-text {
+        margin-bottom: 30px;
+
+        .media(@mobile, {
+          margin-bottom: 20px;
+        });
+      }
+
+      .btn {
+        width: 100%;
+
+        .media(@mobile, {
+          margin-top: 0;
+        });
+
+        .media(@minmobile, {
+          margin-top: auto;
+        });
+      }
+
+      &-tag {
+        color: #7C8395;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15px;
+
+        .media(@mobile, {
+          font-size: 13px;
+          line-height: 13px;
+        });
+      }
+    }
+
+    &_info {
+      height: 100%;
+
+      .media(@mobile, {
+        min-height: auto;
+      });
+    }
+
+    .fundraising {
+      width: 100%;
+      margin-top: 15px;
+
+      .media(@mobile, {
+        margin-top: auto;
+      });
+
+      .progress {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #E3E4F0;
+        height: 4px;
+        width: 100%;
+
+        &-bar {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          border-radius: 8px;
+          background-color: @orange;
+        }
+      }
+
+      .info {
+        margin: 8px 0 20px;
+        justify-content: space-between;
+
+        &-item {
+          text-align: left;
+
+          &.text-right {
+            text-align: right;
+          }
+        }
+
+        &-title {
+          color: #7C8395;
+          font-size: 13px;
+          font-family: @fontInter;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0.26px;
+          margin-bottom: 8px;
+
+          .media(@mobile, {
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 5px;
+          });
+        }
+
+        &-sum {
+          color: @colortitle;
+          font-family: @fontInter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 34px;
+          letter-spacing: -0.28px;
+
+          .media(@mobile, {
+            font-size: 20px;
+            line-height: 24px;
+          });
+        }
+      }
+    }
+  }
+
+  .btn-transparent {
+
+    .media(@phone, {
+      width: 100%;
+    });
+
+    &:hover {
+
+      svg {
+
+        path {
+          fill: none;
+          stroke: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  &__tab {
+
+    .current-fees__content {
+      display: none;
+      margin-bottom: 0;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .btn.btn-transparent.btn-content {
+    margin-top: 0;
+  }
+}

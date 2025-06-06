@@ -1,0 +1,116 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.thank-you {
+  max-width: 846px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 76px;
+
+  &.hide {
+    display: none;
+  }
+
+  .media(@mobile, {
+    margin-bottom: 36px;
+  });
+
+  .media(@tablet, {
+    max-width: 100%;
+    margin: 20px;
+    margin-bottom: 38px;
+  });
+
+  .title {
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    .media(@mobile, {
+      margin: 12px 0;
+    });
+  }
+
+  .subtitle {
+    font: 24px/30px @fontInter;
+    font-weight: 600;
+    color: @colortext;
+    margin-bottom: 24px;
+
+    .media(@mobile, {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    });
+  }
+
+  .text {
+    max-width: 720px;
+    color: #7C8395;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    max-width: 256px;
+
+    .media(@phone, {
+      max-width: 100%;
+    });
+  }
+
+  .unsubscribe-form .btn {
+    margin-top: 40px;
+
+    .media(@mobile, {
+      margin-top: 24px;
+    });
+  }
+
+  .form-cancel {
+    margin-bottom: 40px;
+
+    .media(@mobile, {
+      margin-bottom: 24px;
+    });
+
+    .media(@phone, {
+      flex-direction: column;
+    });
+  }
+
+  .form-cancel-item {
+    width: 100%;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+
+      .media(@phone, {
+        margin-right: 0;
+        margin-bottom: 8px;
+      });
+    }
+
+    input {
+      width: 100%;
+      max-width: 350px;
+      font: 14px/20px @fontInter;
+      font-weight: 400;
+      color: @colortitle;
+      background: #FFFFFF;
+      letter-spacing: 0.14px;
+      padding: 10px 20px;
+      border: 1px solid #C9CEDF;
+      border-radius: 8px;
+
+      .media(@phone, {
+        max-width: 100%;
+      });
+
+      &::placeholder {
+        font: 14px/20px @fontInter;
+        font-weight: 400;
+        color: #ABB3C9;
+      }
+    }
+  }
+}

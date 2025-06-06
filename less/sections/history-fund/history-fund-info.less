@@ -1,0 +1,141 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.history-fund {
+
+  &__block {
+
+    &_item {
+
+      .media(@mobile, {
+        margin: 70px 0;
+      });
+
+      &.item-gray {
+        background: #F8F8F8;
+        padding: 96px 0;
+
+        .media(@mobile, {
+          padding: 72px 0;
+        });
+
+        .history-fund {
+
+          &__block {
+
+            &_subitem {
+
+              &:not(:first-child) {
+
+                .title {
+                  font-size: 38px;
+                  line-height: 44px;
+
+                  .media(@mobile, {
+                    font-size: 26px;
+                    line-height: 34px;
+                    margin-bottom: 24px;
+                  });
+                }
+              }
+            }
+
+            &_text {
+
+              p {
+                margin-bottom: 0;
+              }
+
+              img {
+                margin-top: 0;
+                margin-bottom: 24px;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_subitem {
+
+      &:not(:last-child) {
+        margin-bottom: 64px;
+
+        .media(@mobile, {
+          margin-bottom: 40px;
+        });
+      }
+    }
+
+    &_icon {
+      margin-bottom: 10px;
+    }
+
+    &_image {
+      margin-top: 56px;
+    }
+
+    &_title {
+      flex-basis: 33%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .title {
+
+        .media(@mobile, {
+          margin-bottom: 24px;
+        });
+      }
+    }
+
+    &_text {
+      flex-basis: 58%;
+      font: 20px/28px @fontInter;
+      font-weight: 400;
+      color: @colortext;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 24px;
+      });
+
+      strong {
+        display: block;
+        font: 24px/30px @fontInter;
+        font-weight: 600;
+        margin-bottom: 16px;
+
+        .media(@mobile, {
+          font-size: 20px;
+          line-height: 26px;
+        });
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      img {
+        height: 460px;
+        margin-top: 56px;
+        border-radius: 30px;
+
+        .media(@mobile, {
+          margin-top: 24px;
+          border-radius: 20px;
+        });
+
+        .media(@phone, {
+          height: 260px;
+        });
+      }
+    }
+  }
+}

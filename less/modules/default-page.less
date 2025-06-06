@@ -1,0 +1,61 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.default-wrapper {
+
+  .title {
+    margin: 56px 0;
+
+    .media(@mobile, {
+      margin: 20px 0;
+    });
+  }
+
+  h2, h3, h4 {
+    font: 38px/44px @fontInter;
+    font-weight: 600;
+    color: @colortitle;
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    .media(@mobile, {
+      font-size: 26px;
+      line-height: 34px;
+    });
+  }
+
+  p, li {
+    font: 16px/24px @fontInter;
+    font-weight: 400;
+    color: @colortitle;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    .media(@mobile, {
+      font-size: 14px;
+      line-height: 20px;
+    });
+  }
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: @colortitle;
+    text-decoration: underline;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  .support-block {
+    margin-top: 152px;
+    margin-bottom: 76px;
+
+    .media(@mobile, {
+      margin: 36px 0;
+    });
+  }
+}

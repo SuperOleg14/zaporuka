@@ -1,0 +1,102 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.result {
+
+  &__content {
+    margin-bottom: 60px;
+
+    .media(@mobile, {
+      margin-bottom: 16px;
+    });
+
+    .about-volunteering {
+
+      &__content {
+
+        &_item {
+          margin-bottom: 16px;
+
+          .media(@tablet, {
+            flex-basis: 48%;
+          });
+
+          .media(@mobile, {
+            flex-basis: 100%;
+          });
+        }
+
+        &_text {
+          margin-top: 26px;
+
+          .media(@mobile, {
+            margin-top: 16px;
+          });
+        }
+      }
+    }
+  }
+
+  &__reward {
+
+    .media(@mobile, {
+      flex-direction: column;
+    });
+
+    &_info  {
+      max-width: 370px;
+      margin-right: 64px;
+
+      .media(@tablet, {
+        margin-right: 24px;
+      });
+
+      .media(@mobile, {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+      });
+
+      h2, h3 {
+        font: 44px/50px @fontInter;
+        font-weight: 600;
+        color: @colortitle;
+        margin-bottom: 16px;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 29px;
+          line-height: 36px;
+          letter-spacing: -0.29px;
+        });
+      }
+
+      p {
+        font: 18px/24px @fontInter;
+        font-weight: 400;
+        color: @colortitle;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 16px;
+          line-height: 22px;
+        });
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &_photo {
+      width: 100%;
+      max-width: 410px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .media(@mobile, {
+        max-width: 100%;
+      });
+    }
+  }
+}

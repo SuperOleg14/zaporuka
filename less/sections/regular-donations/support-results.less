@@ -1,0 +1,62 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.support-results {
+
+  .title {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__content {
+
+    &_item {
+      flex-basis: 32.7%;
+      font: 18px/24px @fontInter;
+      font-weight: 400;
+      color: @colortitle;
+      padding: 68px 40px;
+      background: #F8F8F8;
+      border-radius: 20px;
+      margin-bottom: 12px;
+
+      .media(@desktop, {
+        flex-basis: 49.5%;
+      });
+
+      .media(@mobile, {
+        flex-basis: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 32px;
+        border: 1px solid #F0F1F5;
+      });
+
+      strong {
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &:nth-child(5n+4), &:nth-child(5n+5) {
+        flex-basis: 49.5%;
+
+        .media(@mobile, {
+          flex-basis: 100%;
+        });
+      }
+    }
+
+    &_icon {
+      min-width: 80px;
+      margin-left: 40px;
+
+      .media(@mobile, {
+        margin-left: 20px;
+      });
+    }
+  }
+}

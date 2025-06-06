@@ -1,0 +1,84 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.numbers {
+  margin-top: 64px;
+
+  .title {
+    flex-basis: 33%;
+
+    .media(@tablet, {
+      flex-basis: 100%;
+    });
+
+    .media(@mobile, {
+      margin-bottom: 16px;
+    });
+  }
+
+  &__content {
+
+    &_info {
+      flex-basis: 58%;
+      font: 24px/30px @fontInter;
+      font-weight: 600;
+      color: @colortext;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 24px;
+      });
+    }
+
+    &_text {
+      font: 20px/28px @fontInter;
+      font-weight: 400;
+      color: @colortext;
+      margin: 40px 0;
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 24px 0;
+      });
+    }
+
+    &_block {
+
+      &--item {
+        font: 16px/24px @fontInter;
+        font-weight: 400;
+        color: @colortext;
+        margin-bottom: 24px;
+
+        .media(@mobile, {
+          margin-bottom: 20px;
+        });
+
+        .media(@phone, {
+          flex-basis: 100%;
+        });
+
+        span {
+          display: block;
+          font: 56px/56px @fontInter;
+          font-weight: 800;
+          color: @orange;
+          letter-spacing: -1.68px;
+          margin-bottom: 12px;
+
+          .media(@mobile, {
+            font-size: 40px;
+            line-height: 44px;
+            letter-spacing: -1.2px;
+            margin-bottom: 8px;
+          });
+        }
+      }
+    }
+  }
+}

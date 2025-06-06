@@ -1,0 +1,86 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.first-screen {
+  margin-bottom: 0;
+
+  &__content {
+    gap: 0;
+    padding: 56px;
+    margin-top: 32px;
+
+    .media(@mobile, {
+      padding: 0;
+      margin-top: 16px;
+    });
+
+    .text-content {
+      width: 100%;
+      max-width: 565px;
+      margin: 0;
+
+      .media(@mobile, {
+        max-width: 100%;
+      });
+
+      .btn {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 48px;
+
+        .media(@mobile, {
+          margin-top: 24px;
+        });
+
+        .media(@phone, {
+          max-width: 100%;
+        });
+      }
+
+      svg {
+
+        .media(@mobile, {
+          filter: invert(0);
+        });
+      }
+    }
+
+    .image {
+      border-radius: 30px;
+
+      .media(@mobile, {
+        margin-bottom: 32px;
+        border-radius: 20px;
+      });
+    }
+
+    h1, h2 {
+      font: 52px/54px @fontInter;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 16px;
+      margin-top: 0;
+      letter-spacing: -0.52px;
+
+      .media(@mobile, {
+        font-size: 29px;
+        line-height: 36px;
+        color: @colortitle;
+        letter-spacing: -0.29px;
+      });
+    }
+
+    p {
+      font: 16px/24px @fontInter;
+      font-weight: 400;
+      color: white;
+      margin: 0;
+
+      .media(@mobile, {
+        font-size: 14px;
+        line-height: 22px;
+        color: @colortext;
+      });
+    }
+  }
+}

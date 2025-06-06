@@ -1,0 +1,132 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.first-display {
+
+  &__image {
+    margin-top: 32px;
+    margin-bottom: 76px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+
+    .media(@mobile, {
+      border-radius: 20px;
+      margin-top: 20px;
+      margin-bottom: 32px;
+    });
+  }
+
+  .main-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    max-width: 630px;
+  }
+
+  &__content {
+    margin-top: 28px;
+
+    .media(@mobile, {
+      margin-top: 20px;
+    });
+
+    &_item {
+      background: #F8F8F8;
+      padding: 32px;
+      border: 1px solid #F0F1F5;
+      border-radius: 20px;
+      margin-top: 12px;
+
+      .media(@tablet, {
+        flex-basis: 49%;
+      });
+
+      .media(@mobile, {
+        padding: 20px;
+        border-color: #F8F8F8;
+      });
+
+      .media(@phone, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_title {
+      font: 24px/30px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-left: 12px;
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 24px;
+      });
+    }
+
+    .text {
+      max-width: 100%;
+      margin-top: 38px;
+
+      .media(@mobile, {
+        margin-top: 12px;
+      });
+    }
+  }
+}
+
+.join {
+
+  .contacts {
+
+    &__block {
+
+      &_item {
+
+        &:last-child {
+
+          .btn {
+            color: @colortitle;
+            background: transparent;
+            border: 1px solid #ABB3C9;
+
+            &:hover {
+              color: #f0f1f5;
+              background: @colortitle;
+              border-color: @colortitle;
+
+              svg {
+
+                path {
+                  fill: #f0f1f5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    max-width: 260px;
+
+    &:hover {
+      color: #f0f1f5;
+      background: @colortitle;
+      border-color: @colortitle;
+
+      svg {
+
+        path {
+          fill: #f0f1f5;
+        }
+      }
+    }
+  }
+}

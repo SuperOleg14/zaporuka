@@ -1,0 +1,140 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.hospitals {
+
+  &__content {
+
+    &_info {
+      flex-basis: 33%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+        margin-bottom: 24px;
+      });
+
+      .title {
+        margin-bottom: 16px;
+      }
+
+      .text {
+        margin-bottom: 24px;
+      }
+
+      select {
+        width: 100%;
+        max-width: 300px;
+        font: 20px/28px @fontInter;
+        font-weight: 400;
+        padding: 17px 24px;
+        background: #F8F8F8 url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC43OTA4IDQuMjE2OTZDMTUuMDY5NyA0LjUwNjI0IDE1LjA2OTcgNC45NzUyNSAxNC43OTA4IDUuMjY0NTJMOC41MDUwOCAxMS43ODNDOC4yMjYxMyAxMi4wNzIzIDcuNzczODcgMTIuMDcyMyA3LjQ5NDkyIDExLjc4M0wxLjIwOTIxIDUuMjY0NTJDMC45MzAyNjMgNC45NzUyNSAwLjkzMDI2MyA0LjUwNjIzIDEuMjA5MjEgNC4yMTY5NkMxLjQ4ODE2IDMuOTI3NjggMS45NDA0MiAzLjkyNzY4IDIuMjE5MzYgNC4yMTY5Nkw4IDEwLjIxMTdMMTMuNzgwNiA0LjIxNjk2QzE0LjA1OTYgMy45Mjc2OCAxNC41MTE4IDMuOTI3NjggMTQuNzkwOCA0LjIxNjk2WiIgZmlsbD0iIzE3MTcxNyIvPgo8L3N2Zz4K") no-repeat 91% center;
+        background-size: 16px 16px;
+        border: 1px solid #F0F1F5;
+        border-radius: 20px;
+
+        .media(@mobile, {
+          font-size: 18px;
+          line-height: 26px;
+          padding: 12px 20px;
+        });
+
+        .media(@phone, {
+          max-width: 100%;
+        });
+
+        &:active, &:focus {
+          background: #F8F8F8 url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMTRMMTAgNkwxOCAxNCIgc3Ryb2tlPSIjMTcxNzE3IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=") no-repeat 91% center;
+          background-size: 16px 16px;
+        }
+      }
+    }
+
+    &_hospital {
+      flex-basis: 58%;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .hospital-item {
+        width: 100%;
+        background: #F8F8F8;
+        padding: 32px;
+        border: 1px solid #F0F1F5;
+        border-radius: 20px;
+
+        .media(@mobile, {
+          padding: 20px;
+        });
+
+        .media(@phone, {
+          flex-direction: column;
+        });
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        &__info {
+          flex-basis: 60%;
+
+          .media(@mobile, {
+            flex-basis: 50%;
+          });
+
+          .media(@phone, {
+            flex-basis: 100%;
+          });
+        }
+
+        &__title {
+          font: 20px/28px @fontInter;
+          font-weight: 600;
+          color: @colortitle;
+          margin-bottom: 5px;
+
+          .media(@mobile, {
+            font-size: 18px;
+            line-height: 26px;
+          });
+        }
+
+        &__department {
+          font: 14px/21px @fontInter;
+          font-weight: 400;
+          color: @colortitle;
+          letter-spacing: 0.14px;
+        }
+
+        &__place {
+          flex-basis: 35%;
+
+          .media(@mobile, {
+            flex-basis: 40%;
+          });
+
+          .media(@phone, {
+            flex-basis: 100%;
+            margin-top: 10px;
+          });
+
+          a {
+            display: block;
+            font: 16px/24px @fontInter;
+            font-weight: 400;
+            color: #7C8395;
+
+            .media(@phone, {
+              font-size: 14px;
+              line-height: 22px;
+            });
+
+            &:hover {
+              color: @orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

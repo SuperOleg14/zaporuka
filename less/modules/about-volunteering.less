@@ -1,0 +1,80 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.about-volunteering {
+
+  &__content {
+    margin-bottom: 48px;
+
+    .media(@tablet, {
+      flex-direction: column;
+    });
+
+    .media(@phone, {
+      margin-bottom: 16px;
+    });
+
+    &_photo {
+      border-radius: 30px;
+      overflow: hidden;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+        margin-bottom: 12px;
+      });
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &_info {
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+    }
+
+    &_item {
+      padding: 32px;
+      background: #F8F8F8;
+      border: 1px solid #F0F1F5;
+      border-radius: 20px;
+
+      &:nth-child(-n+2) {
+        margin-bottom: 12px;
+      }
+
+      .media(@phone, {
+        flex-basis: 100%;
+        padding: 24px;
+        margin-bottom: 12px;
+      });
+    }
+
+    &_title {
+      font: 24px/30px @fontInter;
+      font-weight: 600;
+      color: @colortitle;
+      margin-left: 12px;
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 22px;
+      });
+    }
+
+    &_text {
+      font: 16px/24px @fontInter;
+      font-weight: 400;
+      color: @colortext;
+      margin-top: 44px;
+
+      .media(@mobile, {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 16px;
+      });
+    }
+  }
+}

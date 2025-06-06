@@ -1,0 +1,43 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.result {
+  margin-top: 0;
+
+  &__content {
+    margin: 0;
+
+    .about-volunteering__content_item {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.info-block {
+
+  .info-block-slider {
+    width: 100%;
+    max-width: 740px;
+    padding-bottom: 60px;
+
+    .media(@desktop, {
+      max-width: 600px;
+    });
+
+    .media(@tablet, {
+      max-width: 100%;
+    });
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  .slider-counter {
+    position: absolute;
+    right: 110px;
+    bottom: 8px;
+    z-index: 11;
+  }
+}

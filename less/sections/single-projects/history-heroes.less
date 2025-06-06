@@ -1,0 +1,151 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.history-heroes {
+
+  &__content {
+    padding: 64px;
+    background: #F8F8F8;
+    border: 1px #F0F1F5;
+    border-radius: 30px;
+
+    .media(@tablet, {
+      padding: 32px 20px;
+    });
+
+    &_info {
+      flex-basis: 100%;
+
+      .media(@minmobile, {
+        position: sticky;
+        top: 75px;
+        flex-basis: 40%;
+      });
+
+      h2 {
+        font: 44px/50px @fontInter;
+        font-weight: 600;
+        color: @colortitle;
+        margin-bottom: 16px;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 29px;
+          line-height: 36px;
+          letter-spacing: -0.29px;
+        });
+      }
+
+      p {
+        font: 18px/24px @fontInter;
+        font-weight: 400;
+        color: @colortext;
+        margin-top: 0;
+
+        .media(@mobile, {
+          font-size: 16px;
+          line-height: 22px;
+        });
+      }
+    }
+
+    &_block {
+      flex-basis: 100%;
+
+      .media(@minmobile, {
+        flex-basis: 49%;
+      });
+
+      &--item {
+        border-radius: 20px;
+        overflow: hidden;
+
+        &:not(:last-child) {
+          margin-bottom: 60px;
+
+          .media(@mobile, {
+            margin-bottom: 20px;
+          });
+        }
+      }
+
+      &--container {
+        padding: 32px;
+        background: white;
+
+        .media(@mobile, {
+          padding: 32px 20px;
+        });
+      }
+
+      &--text {
+        font: 16px/24px @fontInter;
+        font-weight: 400;
+        color: #7C8395;
+        margin-bottom: 24px;
+
+        .media(@mobile, {
+          font-size: 14px;
+          line-height: 22px;
+        });
+
+        &.strong {
+          font-weight: 700;
+
+          .media(@mobile, {
+            font-weight: 500;
+          });
+        }
+
+        p {
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &--title {
+        font: 20px/28px @fontInter;
+        font-weight: 700;
+        color: @colortitle;
+        margin-bottom: 24px;
+
+        .media(@mobile, {
+          font-size: 18px;
+          line-height: 26px;
+        });
+      }
+
+      &--link {
+        font: 16px/16px @fontInter;
+        font-weight: 500;
+        color: @colortitle;
+
+        .media(@mobile, {
+          font-size: 14px;
+        });
+
+        &:hover {
+          color: @orange;
+        }
+      }
+
+      &--photo {
+        height: 550px;
+
+        .media(@mobile, {
+          height: 350px;
+        });
+
+        .media(@phone, {
+          height: 230px;
+        });
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

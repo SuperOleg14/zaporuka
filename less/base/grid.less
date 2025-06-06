@@ -1,0 +1,90 @@
+@import "mixins";
+
+.container{
+  width: 100%;
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.d-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.--just-space {
+  justify-content: space-between;
+}
+
+.--jc-center {
+  justify-content: center;
+}
+
+.--align-center {
+  align-items: center;
+}
+
+.--align-stretch {
+  align-items: stretch;
+}
+
+.--dir-col {
+  flex-direction: column;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.basis-2() {
+  flex-basis: 49%;
+
+  //@currentDevice: mobile;
+  //.check-device {
+  //  .media(@currentDevice, {
+  //    flex-basis: 100%;
+  //  });
+  //}
+}
+
+.--basis-3 {
+  flex-basis: 32%;
+
+  //@currentDevice: tablet;
+  //.check-device {
+  //  .media(@currentDevice, {
+  //    .basis-2();
+  //  });
+  //}
+  //
+  //@currentDevice: mobile;
+  //.check-device {
+  //  .media(@currentDevice, {
+  //    flex-basis: 100%;
+  //  });
+  //}
+}
+
+.--basis-2 {
+  .basis-2();
+}
+
+.--basis-4 {
+  flex-basis: 24%;
+
+  //@currentDevice: tablet;
+  //.check-device {
+  //  .media(@currentDevice, {
+  //    flex-basis: 49%;
+  //  });
+  //}
+  //
+  //@currentDevice: mobile;
+  //.check-device {
+  //  .media(@currentDevice, {
+  //    flex-basis: 100%;
+  //  });
+  //}
+}

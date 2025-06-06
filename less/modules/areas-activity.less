@@ -1,0 +1,104 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.areas-activity {
+  position: relative;
+  width: 100%;
+
+  &__content {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .media(@mobile, {
+      margin-top: 24px;
+    });
+
+    .item {
+      border-radius: 30px;
+      border: 1px solid #F3F3F3;
+      background-color: #F8F8F8;
+      gap: 40px;
+      padding-right: 40px;
+      overflow: hidden;
+      align-items: center;
+
+      .media(@tablet, {
+        padding-right: 20px;
+      });
+
+      .media(@mobile, {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 15px;
+        padding-right: 0;
+      });
+
+      .media(@minmobile, {
+        align-items: stretch;
+      });
+    }
+
+    .image {
+      width: 100%;
+
+      .media(@minmobile, {
+        max-width: 302px;
+        flex: 1 1 32.5%;
+      });
+
+      img {
+
+        .media(@minmobile, {
+          height: 100%;
+        });
+      }
+    }
+
+    .item-text {
+
+      .media(@minmobile, {
+        max-width: 602px;
+        flex: 1 1 47%;
+        margin-top: auto;
+        margin-bottom: auto;
+      });
+
+      .media(@tablet, {
+        padding: 15px 0;
+      });
+
+      .media(@mobile, {
+        padding: 0 15px;
+      });
+
+      .small-title {
+        margin-bottom: 12px;
+      }
+    }
+
+    .btn {
+      margin-top: 0;
+
+      .media(@minmobile, {
+        height: 48px;
+        max-width: 256px;
+        flex: 1 1 20%;
+        margin-top: auto;
+        margin-bottom: auto;
+      });
+
+      .media(@mobile, {
+        margin: 0 15px;
+      });
+
+      .media(@phone, {
+        width: calc(100% - 30px);
+      });
+    }
+
+  }
+
+
+}

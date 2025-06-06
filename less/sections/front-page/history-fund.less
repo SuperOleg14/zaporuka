@@ -1,0 +1,79 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.history-fund {
+  position: relative;
+  width: 100%;
+  margin-top: 76px;
+
+  .media(@mobile, {
+    margin-top: 32px;
+  });
+
+  &__content {
+    gap: 24px;
+    margin-top: 48px;
+
+    .media(@mobile, {
+      flex-direction: column;
+      margin-top: 24px;
+    });
+  }
+
+  .image {
+
+    img {
+      height: 100%;
+      object-position: center;
+      border-radius: 30px;
+    }
+
+    .media(@minmobile, {
+      max-width: 736px;
+      width: 57.5%;
+    });
+
+    .btn {
+      margin-top: 48px;
+
+      .media(@mobile, {
+        margin-top: 24px;
+      });
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .media(@minmobile, {
+      max-width: 520px;
+      width: 41%;
+    });
+
+    .item {
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid #F0F1F5;
+      background-color: #F8F8F8;
+
+      .media(@mobile, {
+        padding: 16px;
+      });
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

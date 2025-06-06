@@ -1,0 +1,29 @@
+@import "less/base/mixins";
+
+.third-block {
+
+  .title {
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__content {
+
+    &_item {
+
+      &:last-child {
+
+        .media(@phone, {
+          margin-bottom: 0;
+        });
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "less/base/variables";
+@import "less/base/mixins";
+
+.advantages {
+
+  .title {
+    max-width: 470px;
+  }
+
+  &__content {
+
+    p {
+      margin: 0;
+    }
+
+    &_left {
+      flex-basis: 36%;
+
+      .media(@desktop, {
+        flex-basis: 40%;
+      });
+
+      .media(@tablet, {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+      });
+
+      .text {
+        color: #000000;
+        margin-bottom: 36px;
+
+        .media(@mobile, {
+          margin-bottom: 24px;
+        });
+
+        strong {
+          display: block;
+          font-weight: 700;
+          margin-top: 16px;
+
+          .media(@mobile, {
+            flex-basis: 100%;
+            margin-top: 0;
+          });
+        }
+      }
+
+      .btn {
+
+        .media(@phone, {
+          width: 100%;
+        });
+      }
+    }
+
+    &_right {
+      flex-basis: 58%;
+      font: 20px/28px @fontInter;
+      font-weight: 400;
+      color: @colortitle;
+
+      .media(@tablet, {
+        flex-basis: 100%;
+      });
+
+      .media(@mobile, {
+        font-size: 18px;
+        line-height: 26px;
+      });
+
+      &--item {
+        background: #F8F8F8;
+        padding: 32px 29px 36px 55px;
+        border-radius: 20px;
+
+        .media(@mobile, {
+          padding: 20px;
+          padding-bottom: 55px;
+        });
+
+        .media(@phone, {
+          flex-basis: 100%;
+        });
+
+        &:not(:last-child) {
+
+          .media(@phone, {
+            margin-bottom: 12px;
+          });
+        }
+      }
+    }
+  }
+
+}
